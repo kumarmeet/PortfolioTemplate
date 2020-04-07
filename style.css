@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: black;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  position: relative;
+  width: 90%;
+  font-size: 0.7rem;
+  margin: 0 auto;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li {
+  padding: 1.3rem 0.5rem;
+  list-style: none;
+}
+
+header nav ul li a {
+  color: #8b8787;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav ul li a:hover {
+  color: white;
+  border-bottom: 1px solid #006dff;
+  transition: ease-out 0.3s;
+}
+
+.back-grid {
+  height: 100vh;
+  display: grid;
+  /* grid-template-columns: 1.3fr 750px; */
+  grid-template-columns: 40% 60%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.left {
+  height: 100%;
+  background: #232325;
+  position: relative;
+  z-index: 1;
+}
+
+.right {
+  height: 100%;
+  background: linear-gradient(
+      90deg,
+      #01010265 0%,
+      #0101097e 100%,
+      #000000c5 100%
+    ),
+    url("ux-store-jJT2r2n7lYA-unsplash.jpg") no-repeat center/cover;
+  filter: blur(3px);
+}
+
+main {
+  /* border: 2px solid white; */
+  /* display: inline-block; */
+  margin: 0 auto;
+  height: 60vh;
+  width: 70vw;
+
+  margin: 4rem auto;
+
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.intro {
+  background: #02232a;
+  min-width: 500px;
+  height: 90%;
+  border-radius: 8px;
+  box-shadow: 8px 8px 16px 8px rgb(10, 10, 10);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+
+  position: relative;
+  top: 1.5rem;
+  left: 1.5rem;
+
+  animation: slide-r-t-l 0.7s cubic-bezier(0, 0.16, 0.92, 0.99) 0.1s forwards
+    alternate;
+}
+
+.intro h3,
+.intro h1,
+.intro p,
+.intro button {
+  margin-top: 1rem;
+  color: white;
+}
+
+.intro h3 {
+  font-weight: 100;
+  color: #8b8787;
+  font-size: 2rem;
+}
+
+.intro button {
+  width: 7rem;
+  padding: 0.5rem;
+  background: rgb(49, 49, 255);
+  -webkit-appearance: none;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+  font-family: inherit;
+  outline: none;
+  font-weight: bold;
+}
+
+.top-img {
+  width: 47%;
+  height: 85%;
+  position: relative;
+  z-index: 2;
+  right: 2rem;
+  border-radius: 8px;
+  box-shadow: 8px 8px 16px 8px rgb(10, 10, 10);
+  animation: slide-l-t-r 0.3s cubic-bezier(0, 0.16, 0.92, 0.99) 0.1s forwards;
+  background: no-repeat;
+}
+
+.top-img img {
+  min-width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+footer {
+  position: fixed;
+  background: #02232a;
+  bottom: 0;
+  right: 0;
+  width: 4%;
+  height: 80%;
+  z-index: 6;
+}
+
+footer ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+footer ul li {
+  list-style: none;
+  align-content: flex-end;
+  font-size: 1.4rem;
+  animation: slide-l-t-r 0.7s cubic-bezier(0, 0.16, 0.92, 0.99) 0.1s forwards
+    alternate;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #8b8787;
+}
+
+footer ul li a:hover {
+  color: white;
+  transition: ease-in 0.2s;
+}
+
+@keyframes slide-l-t-r {
+  from {
+    transform: translateX(700px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-r-t-l {
+  from {
+    transform: translateX(-700px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* @media only screen and  (max-width: 500px) {
+  .intro h3 {
+    font-weight: 100;
+    color: #e90f0f;
+    font-size: 1rem;
+  }
+
+  .intro button {
+    width: 7rem;
+    padding: 0.4rem;
+    background: rgb(49, 49, 255);
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 5rem;
+    cursor: pointer;
+    font-family: inherit;
+    outline: none;
+  }
+} */
